@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		.container {
+			border: 5px solid black;
+			height: 500px;
+			width: 200px;
+			box-sizing: border-box;
+			margin:auto;
+		}
+		.kotak1,.kotak2,.kotak3 {
+			border: 3px solid black;
+			margin:5px;
+			height: 150px;
+			width: 175px;
+		}
+		.input{
+			padding-bottom: 3px;
+		}
+		.tulisan,.tulisan2,.tulisan3{
+			text-align: center;
+			padding-top: 10px;
+			color: white;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="kotak1">
+			<div class="tulisan"></div>
+		</div>
+		<div class="kotak2">
+			<div class="tulisan2"></div>
+		</div>
+		<div class="kotak3">
+			<div class="tulisan3"></div>
+		</div>
+	</div>
+	<div class="input">
+		<h1>Tombol :</h1>
+		<input type="button" class="merah" value="merah">
+		<input type="button" class="kuning" value="kuning">
+		<input type="button" class="hijau" value="hijau">
+		<input type="button" class="reset" value="reset">
+	</div>
+	<div class="inputTulisan">
+		<h3>Input Tulisan Kotak 1 :</h3>
+		<input type="text" class="text">
+		<input type="button" class="tambah" value="tambahkan">
+		<h3>Input Tulisan Kotak 2 :</h3>
+		<input type="text2" class="text2">
+		<input type="button" class="tambah2" value="tambahkan">
+		<h3>Input Tulisan Kotak 3 :</h3>
+		<input type="text3" class="text3">
+		<input type="button" class="tambah3" value="tambahkan">
+	</div>
+	<script>
+		//warna merah
+		const merah = document.querySelector('.input .merah');
+		const kotak1 = document.querySelector('.container .kotak1');
+		merah.addEventListener('click',function(){
+			kotak1.style.backgroundColor = "red";
+		});
+		//warna kuning
+		const kuning = document.querySelector('.input .kuning');
+		const kotak2 = document.querySelector('.container .kotak2');
+		kuning.addEventListener('click',function(){
+			kotak2.style.backgroundColor = "yellow";
+		});
+		//warna hijau
+		const hijau = document.querySelector('.input .hijau');
+		const kotak3 =document.querySelector('.container .kotak3');
+		hijau.addEventListener('click',function(){
+			kotak3.style.backgroundColor = "green";
+		});
+		//tombol reset 
+		function reset(){
+			kotak1.style.backgroundColor = "white";
+			kotak2.style.backgroundColor = "white";
+			kotak3.style.backgroundColor = "white";
+		}
+		const resetTombol = document.querySelector('.input .reset');
+		resetTombol.addEventListener('click',reset);
+		const tambah = document.querySelector('.inputTulisan .tambah');
+		tambah.addEventListener('click',function(){
+			let inputText = document.querySelector('.inputTulisan .text').value;
+			document.querySelector('.container .kotak1 .tulisan').innerHTML = inputText;
+		});
+		const tambah2 = document.querySelector('.inputTulisan .tambah2');
+		tambah2.addEventListener('click',function(){
+			let inputText2 = document.querySelector('.inputTulisan .text2').value;
+			document.querySelector('.container .kotak2 .tulisan2').innerHTML = inputText2;
+		});
+		const tambah3 = document.querySelector('.inputTulisan .tambah3');
+		tambah3.addEventListener('click',function(){
+			let inputText3 = document.querySelector('.inputTulisan .text3').value;
+			document.querySelector('.container .kotak3 .tulisan3').innerHTML = inputText3;
+		});
+	</script>
+</body>
+</html>
