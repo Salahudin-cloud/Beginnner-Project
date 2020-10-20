@@ -1,0 +1,118 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.close {
+    color: #f31313;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 8px 12px 40px;
+    cursor: pointer;
+}
+.close:hover {
+    color:#3c463e;
+    translate: .3s;
+}
+.top-bar {
+ padding: 45px 40px;
+ background: #f08b06;
+ text-align: center;
+ color: #ffffff;
+}
+.top-bar h1 {
+    padding-bottom: 15px;
+    font-family: 'Ranchers', cursive;
+    font-size: 40px;
+}
+.input-text {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 73%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+.add-button {
+    padding: 10px;
+    width: 25%;
+    float: right;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    transition: .3s;
+    font-size: 16px;
+    cursor: pointer;
+}
+.add-button:hover{
+    background: #d0d9d2;
+    transition: 0.2s;
+}
+.add-button:active{
+    border: none;
+}
+li{
+    font-size: 20px;
+    padding: 12px 8px 12px 40px;
+    font-family: 'Concert One', cursive;
+    border-bottom: 2px solid #000000;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #afacac;
+    font-size: 18px;
+    transition: 0.2s;
+
+}
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
